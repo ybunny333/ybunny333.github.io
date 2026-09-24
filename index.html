@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Portfolio of Yandrathi Bunny - Cybersecurity Student & Offensive/Defensive Security Enthusiast based in Hyderabad, India.">
+  <meta name="keywords" content="Yandrathi Bunny, Cybersecurity, SOC Analyst, Network Security, Python, Penetration Testing, Threat Detection">
+  <meta name="author" content="Yandrathi Bunny">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="Yandrathi Bunny | Cybersecurity Portfolio">
+  <meta property="og:description" content="Cybersecurity Student | Offensive & Defensive Security Enthusiast | Hyderabad, India">
+  <meta property="og:type" content="website">
+
+  <title>Yandrathi Bunny | Cybersecurity Portfolio</title>
+
+  <!-- Prevent Theme Flash -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = savedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cyber Background Canvas -->
+  <canvas id="cyber-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar-wrapper" id="header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Back to top">
+        <span class="brand-bracket">[</span>
+        <span class="brand-name">YB</span>
+        <span class="brand-cursor">_</span>
+        <span class="brand-bracket">]</span>
+        <span class="brand-status" title="Status: Online & Ready"></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="icon-btn theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Quick Resume Link -->
+        <a href="#resume-modal" class="btn btn-outline-cyber btn-nav-cta" id="quick-resume-btn">
+          <span>Resume</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="icon-btn mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Terminal Window Mockup -->
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">sec-analyst@ybunny-soc: ~</div>
+            <div class="terminal-badge">READY TO DEFEND</div>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-line"><span class="prompt-host">bunny@cyber-node</span>:<span class="prompt-path">~</span>$ whoami</p>
+            <h1 class="hero-name">Yandrathi Bunny</h1>
+            
+            <p class="terminal-line"><span class="prompt-host">bunny@cyber-node</span>:<span class="prompt-path">~</span>$ cat role.txt</p>
+            <div class="typewriter-container">
+              <span class="typewriter-prefix">> </span>
+              <span id="typewriter-text" class="typewriter-text"></span>
+              <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="terminal-line"><span class="prompt-host">bunny@cyber-node</span>:<span class="prompt-path">~</span>$ ./mission_statement.sh</p>
+            <p class="hero-tagline">
+              Dedicated to securing digital architectures, monitoring enterprise threat landscapes, and exploring offensive & defensive security tactics. Passionate about SOC analysis, proactive threat detection, and resilient Python-driven security utilities.
+            </p>
+
+            <div class="hero-meta-grid">
+              <div class="meta-item">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">Hyderabad, India</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">🛡️</span>
+                <span class="meta-text">B.Tech Cybersecurity (2027)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">🎯</span>
+                <span class="meta-text">Focus: SOC, SIEM, Threat Detection</span>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-primary-cyber">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Initialize Contact</span>
+              </a>
+              <button class="btn btn-secondary-cyber" id="open-resume-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>View & Download Resume</span>
+              </button>
+              <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
+
+            <!-- Social Links Quick Bar -->
+            <div class="hero-socials">
+              <span class="social-label">SECURE CHANNELS:</span>
+              <div class="social-links-row">
+                <a href="https://www.linkedin.com/in/yandrathi-bunny-830639328/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub Profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="mailto:mrmadz333@gmail.com" class="social-icon" aria-label="Direct Email" title="Send Email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Telemetry Stats Highlights -->
+        <div class="telemetry-bar">
+          <div class="stat-card">
+            <div class="stat-value">2+</div>
+            <div class="stat-label">Industry Certifications</div>
+            <div class="stat-detail">Google & TryHackMe</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">12+</div>
+            <div class="stat-label">Security Tools & Protocols</div>
+            <div class="stat-detail">Wireshark, Nmap, Burp</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2027</div>
+            <div class="stat-label">B.Tech Graduation</div>
+            <div class="stat-detail">DRK College of Eng. & Tech</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Ethical & Driven</div>
+            <div class="stat-detail">Continuous CTF & Lab Practice</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 01. DOSSIER</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-column">
+            <div class="cyber-card about-card">
+              <div class="card-status-strip">
+                <span class="pulse-indicator"></span>
+                <span>OPERATIONAL PROFILE</span>
+              </div>
+              <p class="about-lead">
+                Hello! I'm <strong>Yandrathi Bunny</strong>, a dedicated cybersecurity undergraduate from Hyderabad, India, with a relentless curiosity for how systems operate, fail, and defend themselves against real-world adversaries.
+              </p>
+              <p>
+                My primary focus revolves around <strong>Security Operations Center (SOC) fundamentals</strong>, <strong>threat detection</strong>, and <strong>incident log analysis</strong>. I find equal intrigue in understanding offensive attack surfaces — such as credential compromise vectors and reconnaissance techniques — in order to build stronger, fortified defensive perimeters.
+              </p>
+              <p>
+                Whether it's dissecting suspicious packets in Wireshark, identifying phishing artifacts in email headers using MBOX analysis, or writing custom Python scripts to reinforce authentication workflows, I thrive on continuous hands-on learning through platforms like TryHackMe and dedicated lab environments.
+              </p>
+
+              <div class="about-highlights-grid">
+                <div class="highlight-item">
+                  <div class="highlight-icon">🎯</div>
+                  <div class="highlight-info">
+                    <h4>Threat Detection</h4>
+                    <p>Detecting brute force, anomalous traffic, and malicious payload patterns.</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-icon">🔍</div>
+                  <div class="highlight-info">
+                    <h4>SOC Operations</h4>
+                    <p>Familiarity with SIEM workflows, log ingestion, and alert triage.</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-icon">🛡️</div>
+                  <div class="highlight-info">
+                    <h4>Offensive & Defensive</h4>
+                    <p>Combining red team curiosity with blue team discipline for defense-in-depth.</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-icon">🐍</div>
+                  <div class="highlight-info">
+                    <h4>Python Security Scripting</h4>
+                    <p>Crafting custom password utilities, auth mechanisms, and automation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-sidebar-column">
+            <!-- System Specs Card -->
+            <div class="cyber-card specs-card">
+              <div class="terminal-mini-bar">
+                <span class="mini-title">AGENT_SPECS.JSON</span>
+              </div>
+              <div class="specs-content">
+                <div class="spec-row">
+                  <span class="spec-key">Full Name:</span>
+                  <span class="spec-val">Yandrathi Bunny</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Role:</span>
+                  <span class="spec-val">Cybersecurity Student</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Location:</span>
+                  <span class="spec-val">Hyderabad, Telangana, India</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Institution:</span>
+                  <span class="spec-val">DRK CET, Bowrempet</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Degree:</span>
+                  <span class="spec-val">B.Tech in Cybersecurity</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Status:</span>
+                  <span class="spec-val status-online">Available for Internships / Roles</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Languages:</span>
+                  <span class="spec-val">English, Telugu, Hindi</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Primary Focus:</span>
+                  <span class="spec-val">SOC Analyst / Blue Team / SecDev</span>
+                </div>
+              </div>
+
+              <div class="security-quote">
+                <p>"Security is not a product, but a continuous posture of vigilance and adaptation."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 02. ARSENAL</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Security Tools -->
+          <div class="cyber-card skill-card" data-category="tools">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🛠️</div>
+              <h3 class="skill-cat-title">Security Tools</h3>
+            </div>
+            <p class="skill-cat-desc">Hands-on application in packet capture, web inspection, network scanning, and digital forensics.</p>
+            <div class="skill-tags">
+              <div class="skill-tag-pill">
+                <span class="tag-name">Wireshark</span>
+                <span class="tag-badge">Packet Analysis</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Nmap</span>
+                <span class="tag-badge">Port Scanning & Recon</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Burp Suite</span>
+                <span class="tag-badge">Web Proxy / Intercept</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">MBOX Viewer</span>
+                <span class="tag-badge">Email Investigation</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Foxton</span>
+                <span class="tag-badge">Browser History & Forensics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Networking -->
+          <div class="cyber-card skill-card" data-category="networking">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🌐</div>
+              <h3 class="skill-cat-title">Networking & Protocols</h3>
+            </div>
+            <p class="skill-cat-desc">Comprehensive grasp of the foundation behind internet communications and perimeter routing.</p>
+            <div class="skill-tags">
+              <div class="skill-tag-pill">
+                <span class="tag-name">TCP/IP Model</span>
+                <span class="tag-badge">Layers & Handshakes</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">DNS</span>
+                <span class="tag-badge">Resolution & Poisoning</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">HTTP / HTTPS</span>
+                <span class="tag-badge">TLS / Handshakes</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">VPN</span>
+                <span class="tag-badge">Tunnels & Encryption</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Routing Fundamentals</span>
+                <span class="tag-badge">Subnets, CIDR, Gateways</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Security Concepts & Operations -->
+          <div class="cyber-card skill-card" data-category="concepts">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🧠</div>
+              <h3 class="skill-cat-title">Core Security Concepts</h3>
+            </div>
+            <p class="skill-cat-desc">Operational defensive strategies, security operations, threat triage, and attack analysis.</p>
+            <div class="skill-tags">
+              <div class="skill-tag-pill">
+                <span class="tag-name">SIEM Basics</span>
+                <span class="tag-badge">Log Aggregation & Alerts</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">IDS / IPS</span>
+                <span class="tag-badge">Intrusion Detection</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Log Analysis</span>
+                <span class="tag-badge">Event Logs & Syslog</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Threat Detection</span>
+                <span class="tag-badge">IOCs & TTPs</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Phishing Identification</span>
+                <span class="tag-badge">Headers, SPF, DKIM</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Brute Force Detection</span>
+                <span class="tag-badge">Thresholding & Lockouts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Operating Systems & Environments -->
+          <div class="cyber-card skill-card" data-category="systems">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">💻</div>
+              <h3 class="skill-cat-title">Operating Systems & Platforms</h3>
+            </div>
+            <p class="skill-cat-desc">Working across defensive and offensive operational systems and learning platforms.</p>
+            <div class="skill-tags">
+              <div class="skill-tag-pill">
+                <span class="tag-name">Kali Linux</span>
+                <span class="tag-badge">Security Distribution</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Windows</span>
+                <span class="tag-badge">Event Viewer & Registry</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">TryHackMe</span>
+                <span class="tag-badge">Hands-On Labs</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">GitHub</span>
+                <span class="tag-badge">Version Control & CI</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Linux Bash</span>
+                <span class="tag-badge">CLI Administration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Programming & Automation -->
+          <div class="cyber-card skill-card" data-category="systems">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🐍</div>
+              <h3 class="skill-cat-title">Programming & Scripting</h3>
+            </div>
+            <p class="skill-cat-desc">Leveraging Python for automated tasks, cryptography, socket interaction, and custom security scripts.</p>
+            <div class="skill-tags">
+              <div class="skill-tag-pill">
+                <span class="tag-name">Python 3</span>
+                <span class="tag-badge">Automation & Tooling</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Hashlib & Secrets</span>
+                <span class="tag-badge">CSPRNG & Cryptography</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Tkinter GUI</span>
+                <span class="tag-badge">Desktop Security Tools</span>
+              </div>
+              <div class="skill-tag-pill">
+                <span class="tag-name">Socket Programming</span>
+                <span class="tag-badge">Port Probing & Packets</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 03. OPERATIONS & REPOSITORIES</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Graphical Password Authentication System -->
+          <article class="cyber-card project-card">
+            <div class="project-header">
+              <div class="project-badges">
+                <span class="badge badge-accent">Python</span>
+                <span class="badge badge-sec">Authentication</span>
+                <span class="badge badge-outline">GUI System</span>
+              </div>
+              <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="project-external-link" aria-label="View Graphical Password Authentication System on GitHub" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+
+            <h3 class="project-title">Graphical Password Authentication System</h3>
+            <p class="project-description">
+              A secure desktop authentication mechanism implemented in Python designed as a robust alternative to conventional alphanumeric passwords. By requiring users to authenticate through sequential graphical patterns and image coordinates, it dramatically decreases vulnerability to dictionary attacks, keylogger capture, and automated brute-forcing.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-arrow">▸</span>
+                <span>Substitutes standard credential entry with image click-sequence verification.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-arrow">▸</span>
+                <span>Incorporates hashed storage of coordinate patterns to prevent plaintext exposure.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-arrow">▸</span>
+                <span>Includes anti-brute force lockout timers after repeated incorrect attempts.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="tech-chip">Python 3</span>
+              <span class="tech-chip">Tkinter GUI</span>
+              <span class="tech-chip">Hashlib</span>
+              <span class="tech-chip">Cryptography</span>
+              <span class="tech-chip">Brute-Force Mitigation</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>View on GitHub</span>
+              </a>
+              <button class="btn btn-secondary-cyber btn-sm open-details-btn" data-modal="graphical-auth">
+                <span>View Specs</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: Secure Password Generator (with Interactive Live Generator!) -->
+          <article class="cyber-card project-card">
+            <div class="project-header">
+              <div class="project-badges">
+                <span class="badge badge-accent">Python / JS</span>
+                <span class="badge badge-sec">CSPRNG</span>
+                <span class="badge badge-outline">Live Interactive Tool</span>
+              </div>
+              <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="project-external-link" aria-label="View Secure Password Generator on GitHub" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+
+            <h3 class="project-title">Secure Password Generator & Entropy Analyzer</h3>
+            <p class="project-description">
+              A cryptographically strong password creation suite leveraging true pseudorandom number generators (CSPRNG, `secrets` in Python & Web Crypto API). Dynamically calculates Shannon entropy bits, checks character space complexity, and tests resilience against rainbow tables and offline hash cracking.
+            </p>
+
+            <!-- Embedded Interactive Live Generator Widget -->
+            <div class="live-generator-widget">
+              <div class="widget-title-bar">
+                <span class="widget-badge">LIVE CSPRNG DEMO</span>
+                <span class="entropy-label" id="entropy-display">Entropy: ~104 bits (Excellent)</span>
+              </div>
+
+              <div class="output-row">
+                <input type="text" id="demo-password-output" readonly value="k#9Xp!vQ7$zL2@mF" aria-label="Generated secure password">
+                <button id="copy-password-btn" class="icon-btn copy-btn" title="Copy to clipboard" aria-label="Copy password">
+                  <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="copy-tooltip" class="copy-tooltip">Copied!</span>
+                </button>
+              </div>
+
+              <div class="generator-controls">
+                <div class="control-slider">
+                  <label for="pass-length-slider">Length: <span id="pass-length-val">16</span></label>
+                  <input type="range" id="pass-length-slider" min="8" max="32" value="16">
+                </div>
+                <div class="control-checkboxes">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" id="include-symbols" checked>
+                    <span>Symbols (!@#$)</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" id="include-numbers" checked>
+                    <span>Numbers (0-9)</span>
+                  </label>
+                </div>
+                <button type="button" id="regenerate-btn" class="btn btn-sm btn-primary-cyber">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                  <span>Generate New</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="tech-chip">Python (`secrets`)</span>
+              <span class="tech-chip">Web Crypto API</span>
+              <span class="tech-chip">Shannon Entropy Math</span>
+              <span class="tech-chip">Security Best Practices</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 04. FIELD WORK</span>
+          <h2 class="section-title">Experience & Internships</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Internship 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <span class="dot-inner"></span>
+            </div>
+            <div class="timeline-content cyber-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Cybersecurity Intern</h3>
+                  <div class="timeline-company">BlueCloud Softech Solutions</div>
+                </div>
+                <div class="timeline-duration-badge">
+                  <span>1 Month Internship</span>
+                </div>
+              </div>
+              <p class="timeline-description">
+                Participated in an immersive cybersecurity internship program, gaining direct exposure to organizational security practices, baseline assessment procedures, and foundational IT security operations.
+              </p>
+              <ul class="timeline-tasks">
+                <li>
+                  <span class="task-bullet">▹</span>
+                  <span>Explored foundational enterprise security configurations and assisted in baseline security compliance checks.</span>
+                </li>
+                <li>
+                  <span class="task-bullet">▹</span>
+                  <span>Observed network traffic patterns and assisted with system monitoring to recognize abnormal endpoint activity.</span>
+                </li>
+                <li>
+                  <span class="task-bullet">▹</span>
+                  <span>Studied standard operating procedures for incident notification, phishing email analysis, and password hygiene enforcement.</span>
+                </li>
+                <li>
+                  <span class="task-bullet">▹</span>
+                  <span>Collaborated with technical mentors to analyze security bulletins and recommend preventive patch management steps.</span>
+                </li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag-small">Enterprise Security</span>
+                <span class="tag-small">Threat Awareness</span>
+                <span class="tag-small">System Auditing</span>
+                <span class="tag-small">Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 05. CREDENTIALS</span>
+          <h2 class="section-title">Certifications</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="credentials-grid">
+          
+          <!-- Cert 1 -->
+          <div class="cyber-card cert-card">
+            <div class="cert-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Google / Coursera</span>
+              <h3 class="cert-title">Google Cybersecurity Professional Certificate</h3>
+              <p class="cert-desc">
+                Comprehensive multi-course professional program covering SOC operational fundamentals, SIEM tools, IDS/IPS architectures, Python scripting for cybersecurity, and incident response frameworks (NIST).
+              </p>
+              <div class="cert-competencies">
+                <span class="tech-chip">SIEM & Log Triage</span>
+                <span class="tech-chip">Linux & SQL</span>
+                <span class="tech-chip">Python Automation</span>
+                <span class="tech-chip">Packet Inspection</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cyber-card cert-card">
+            <div class="cert-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">TryHackMe</span>
+              <h3 class="cert-title">Pre-Security Learning Path</h3>
+              <p class="cert-desc">
+                Foundational hands-on cyber path addressing core computer networking, web applications security mechanics, Linux fundamentals, and foundational offensive/defensive methodologies.
+              </p>
+              <div class="cert-competencies">
+                <span class="tech-chip">Network Security</span>
+                <span class="tech-chip">Web Architecture</span>
+                <span class="tech-chip">Linux CLI</span>
+                <span class="tech-chip">Defensive Concepts</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 06. ACADEMICS</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="cyber-card education-card">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">Bachelor of Technology (B.Tech) in Cybersecurity</h3>
+              <div class="edu-institution">DRK College of Engineering and Technology, Bowrempet</div>
+            </div>
+            <div class="edu-badge">
+              <span>Expected Graduation: 2027</span>
+            </div>
+          </div>
+          <p class="edu-summary">
+            Pursuing specialized undergraduate studies focused on network defense, cryptographic algorithms, operating system security, penetration testing fundamentals, and cyber forensic investigations.
+          </p>
+          <div class="edu-highlights">
+            <span class="edu-course-tag">Network Security</span>
+            <span class="edu-course-tag">Cryptography</span>
+            <span class="edu-course-tag">Operating Systems</span>
+            <span class="edu-course-tag">Database Management</span>
+            <span class="edu-course-tag">Information Security Auditing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 07. MILESTONES</span>
+          <h2 class="section-title">Achievements & Milestones</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <div class="cyber-card achievement-card">
+            <div class="achieve-icon">🚩</div>
+            <div class="achieve-content">
+              <h3 class="achieve-title">CTF Challenge Participation</h3>
+              <p class="achieve-desc">
+                Active contender in Capture The Flag (CTF) security tournaments and challenge rooms, sharpening analytical problem-solving across cryptography, web application vulnerabilities, packet inspection, and network enumeration.
+              </p>
+              <div class="achieve-stat">
+                <span class="stat-highlight">Hands-On Practice</span> on TryHackMe and CTF platforms
+              </div>
+            </div>
+          </div>
+
+          <div class="cyber-card achievement-card">
+            <div class="achieve-icon">⚡</div>
+            <div class="achieve-content">
+              <h3 class="achieve-title">Open-Source & GitHub Security Portfolio</h3>
+              <p class="achieve-desc">
+                Actively publishing and maintaining cybersecurity projects, custom authentication mechanisms, and utility scripts with clean documentation, structured repositories, and continuous code commits on GitHub.
+              </p>
+              <div class="achieve-stat">
+                <span class="stat-highlight">Public Codebase</span> on <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="cyber-inline-link">github.com/ybunny333</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 08. TRANSMISSION</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Direct Details Column -->
+          <div class="contact-info-col">
+            <div class="cyber-card contact-card">
+              <h3 class="contact-card-title">Direct Connection</h3>
+              <p class="contact-intro">
+                I am actively seeking internship opportunities, entry-level SOC / Cybersecurity roles, and collaborative projects. Feel free to connect or drop a message!
+              </p>
+
+              <div class="contact-methods">
+                
+                <!-- Email -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="contact-meta">
+                    <span class="method-label">Email</span>
+                    <a href="mailto:mrmadz333@gmail.com" class="method-val">mrmadz333@gmail.com</a>
+                  </div>
+                  <button class="btn-copy-contact" data-copy="mrmadz333@gmail.com" title="Copy Email" aria-label="Copy Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+
+                <!-- Location -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="contact-meta">
+                    <span class="method-label">Location</span>
+                    <span class="method-val">Hyderabad, Telangana, India</span>
+                  </div>
+                </div>
+
+                <!-- Profiles -->
+                <div class="contact-profiles-row">
+                  <a href="https://www.linkedin.com/in/yandrathi-bunny-830639328/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber btn-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>Connect on LinkedIn</span>
+                  </a>
+                  <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber btn-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Follow on GitHub</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-col">
+            <div class="cyber-card contact-form-card">
+              <div class="terminal-mini-bar">
+                <span class="mini-title">TRANSMIT_MESSAGE.SH</span>
+              </div>
+
+              <form id="contact-form" class="cyber-form" action="https://formsubmit.co/ajax/mrmadz333@gmail.com" method="POST" novalidate>
+                <!-- Live Email Delivery Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" id="form-hidden-subject" value="[Cyber Portfolio] New Incoming Transmission">
+                <div class="form-group">
+                  <label for="form-name">Sender Name <span class="req">*</span></label>
+                  <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                  <span class="form-error-msg" id="name-error">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Sender Email <span class="req">*</span></label>
+                  <input type="email" id="form-email" name="email" placeholder="john@domain.com" required>
+                  <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" name="subject" placeholder="Internship Opportunity / Inquiry">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Transmission Payload / Message <span class="req">*</span></label>
+                  <textarea id="form-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                  <span class="form-error-msg" id="message-error">Please enter your message.</span>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn btn-primary-cyber btn-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  <span>Dispatch Transmission</span>
+                </button>
+
+                <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-bracket">[</span>
+          <span class="brand-name">YANDRATHI BUNNY</span>
+          <span class="brand-bracket">]</span>
+        </div>
+        <p class="footer-tagline">Cybersecurity Student & Ethical Defender • Hyderabad, India</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/yandrathi-bunny-830639328/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="mailto:mrmadz333@gmail.com" aria-label="Email" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">&copy; <span id="current-year"></span> Yandrathi Bunny. All rights reserved.</p>
+        <p class="crypto-note">Built with HTML5, CSS3, & Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- RESUME PREVIEW & DOWNLOAD MODAL -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-container cyber-card">
+      <div class="modal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <h3 id="resume-modal-title" class="modal-title">CURRICULUM_VITAE.PDF</h3>
+        <button id="close-resume-modal" class="icon-btn modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-preview-sheet" id="resume-print-content">
+          <div class="resume-sheet-header">
+            <div>
+              <h1 class="resume-name">Yandrathi Bunny</h1>
+              <p class="resume-headline">Cybersecurity Student | Offensive & Defensive Security Enthusiast</p>
+            </div>
+            <div class="resume-contact-meta">
+              <div>📍 Hyderabad, India</div>
+              <div>✉️ mrmadz333@gmail.com</div>
+              <div>🔗 linkedin.com/in/yandrathi-bunny-830639328</div>
+              <div>💻 github.com/ybunny333</div>
+            </div>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Professional Summary</h2>
+            <p>
+              Dedicated and disciplined Cybersecurity undergraduate at DRK College of Engineering and Technology, Hyderabad. Demonstrated passion for SOC operations, threat intelligence, packet analysis, and security automation. Proficient with core cybersecurity tools including Wireshark, Nmap, and Burp Suite, paired with strong Python scripting capabilities for defensive tooling.
+            </p>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Education</h2>
+            <div class="resume-entry">
+              <div class="entry-row">
+                <strong>B.Tech in Cybersecurity</strong>
+                <span>Expected 2027</span>
+              </div>
+              <div class="entry-sub">DRK College of Engineering and Technology, Bowrempet, Hyderabad</div>
+            </div>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Certifications</h2>
+            <ul class="resume-list">
+              <li><strong>Google Cybersecurity Professional Certificate</strong> — Coursera</li>
+              <li><strong>Pre-Security Learning Path</strong> — TryHackMe</li>
+            </ul>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Technical Skills</h2>
+            <p><strong>Security Tools:</strong> Wireshark, Nmap, Burp Suite, MBOX Viewer, Foxton</p>
+            <p><strong>Networking:</strong> TCP/IP, DNS, HTTP/HTTPS, VPN, Routing Fundamentals, Subnetting</p>
+            <p><strong>Concepts:</strong> SIEM Basics, IDS/IPS, Log Analysis, Threat Detection, Phishing Identification, Brute Force Detection</p>
+            <p><strong>Operating Systems & Platforms:</strong> Kali Linux, Windows, TryHackMe, GitHub</p>
+            <p><strong>Programming:</strong> Python (Automation, Socket Programming, Hashing & Cryptography)</p>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Internship Experience</h2>
+            <div class="resume-entry">
+              <div class="entry-row">
+                <strong>Cybersecurity Intern</strong>
+                <span>1 Month</span>
+              </div>
+              <div class="entry-sub">BlueCloud Softech Solutions</div>
+              <ul class="resume-list">
+                <li>Gained practical exposure to enterprise cybersecurity architecture and routine security auditing.</li>
+                <li>Participated in monitoring network traffic and analyzing abnormal endpoint behaviors.</li>
+                <li>Assisted in documenting security awareness guidelines and phishing email assessment procedures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-sheet-section">
+            <h2 class="resume-section-heading">Key Projects</h2>
+            <div class="resume-entry">
+              <strong>Graphical Password Authentication System (Python)</strong>
+              <p>Engineered an image and coordinate-based login authentication mechanism in Python mitigating dictionary and automated brute-force attacks.</p>
+            </div>
+            <div class="resume-entry">
+              <strong>Cryptographic Secure Password Generator</strong>
+              <p>Constructed a CSPRNG-powered password generator computing Shannon entropy scores and enforcing secure cryptographic randomness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="print-resume-btn" class="btn btn-primary-cyber">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+        <button id="close-modal-footer-btn" class="btn btn-outline-cyber">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPECS MODAL FOR GRAPHICAL AUTH -->
+  <div id="graphical-auth-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-container cyber-card">
+      <div class="modal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <h3 id="auth-modal-title" class="modal-title">PROJECT_SPECS: GRAPHICAL_AUTH.PY</h3>
+        <button class="icon-btn modal-close-btn close-auth-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>System Architecture & Security Concept</h4>
+        <p>
+          Traditional text passwords are overwhelmingly vulnerable to dictionary attacks, keyloggers, shoulder surfing, and credential stuffing. The Graphical Password Authentication System introduces a spatial-visual verification protocol where the user selects predefined points on a designated graphic canvas.
+        </p>
+        <div class="specs-box">
+          <h5>Security Implementations:</h5>
+          <ul>
+            <li><strong>Coordinate Tolerance Jitter:</strong> Applies Euclidean distance bounds around click coordinates so minor user drift is tolerated without exposing precision vulnerabilities.</li>
+            <li><strong>Salting & SHA-256:</strong> Click sequence data is combined with a cryptographically secure salt before hashing, preventing offline rainbow table reconstruction.</li>
+            <li><strong>Lockout Mechanism:</strong> Implements exponential backoff delays following 3 consecutive failed login attempts to neutralize brute-force automation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/ybunny333" target="_blank" rel="noopener noreferrer" class="btn btn-primary-cyber">
+          <span>View on GitHub</span>
+        </a>
+        <button class="btn btn-outline-cyber close-auth-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FINAL CLICK-TARGET REPAIR -->
+  <script>
+    (function () {
+      const selector = [
+        ".hero-cta-group .btn",
+        ".hero-socials .social-icon",
+        "#regenerate-btn",
+        ".contact-profiles-row .btn",
+        ".btn-copy-contact",
+        "#form-name",
+        "#form-email",
+        "#form-subject",
+        "#form-message",
+        "#form-submit-btn",
+        ".footer-socials .social-icon"
+      ].join(",");
+
+      function isInside(el, x, y) {
+        const r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0 &&
+          x >= r.left && x <= r.right &&
+          y >= r.top && y <= r.bottom;
+      }
+
+      function findControl(x, y) {
+        return Array.from(document.querySelectorAll(selector))
+          .filter(el => isInside(el, x, y))
+          .sort((a, b) => {
+            const ar = a.getBoundingClientRect();
+            const br = b.getBoundingClientRect();
+            return (ar.width * ar.height) - (br.width * br.height);
+          })[0] || null;
+      }
+
+      document.addEventListener("click", function (event) {
+        const target = event.target instanceof Element ? event.target : null;
+
+        // Normal clicks on the real control already work.
+        if (target && target.closest(selector)) return;
+
+        // If an invisible/stacking layer received the click, recover the
+        // intended control from the click coordinates.
+        const control = findControl(event.clientX, event.clientY);
+        if (!control) return;
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        if (control.matches("input, textarea")) {
+          control.focus({ preventScroll: true });
+          return;
+        }
+
+        if (control.matches("a[href]")) {
+          const href = control.getAttribute("href");
+          const targetAttr = control.getAttribute("target");
+
+          if (!href) return;
+
+          if (href.startsWith("#")) {
+            const section = document.querySelector(href);
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          } else if (href.startsWith("mailto:")) {
+            window.location.href = href;
+          } else if (targetAttr === "_blank") {
+            window.open(href, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = href;
+          }
+          return;
+        }
+
+        if (control.id === "form-submit-btn") {
+          if (control.form) control.form.requestSubmit(control);
+          return;
+        }
+
+        control.click();
+      }, true);
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
