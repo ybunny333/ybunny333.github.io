@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ybunny333.github.io/sitemap.xml
